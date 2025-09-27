@@ -35,3 +35,16 @@ document.querySelectorAll('img').forEach(img => {
         imgModal.style.display = 'flex';
     });
 });
+
+
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+    navLinks.id = (navLinks.id === "active") ? "nav-links" : "active";
+});
+
+
+if (window.location.hash) {
+    history.replaceState(null, null, 'index.html');
+}
